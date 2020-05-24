@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+	<script type="text/javascript">
+
+
+
+		function calc() {
+			var fps = document.getElementById('fps').value;
+			var timescale = document.getElementById('timescale').value;
+			var ingame = document.getElementById('ingame').value;
+			var result = (fps/(timescale*ingame));
+			document.getElementById('result').innerHTML = result;
+		}
+
+	</script>
+</head>
+<body>
+
+	<div class="grid-container">
+	  <div class="center">
+	    <div class="button">
+				<div id="button" onclick="calc();" value="Result">GO</div>
+				</div>
+	    <div class="fps">
+				<p>FPS</p>
+				<input id="fps" type="text" value="60"></div>
+	    <div class="timescale">
+				<p>TIMESCALE</p>
+				<input id="timescale" type="text" value="1"></div>
+	    <div class="ingame">
+			<p>INGAME SPEED</p>
+			<input id="ingame" type="text" value="1"></div>
+			<div id="res" class="result">
+				<p id="result" class="result">OwO</p>
+			</div>
+	  </div>
+		</div>
+	</div>
+
+
+</body>
+</html>
